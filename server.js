@@ -14,7 +14,7 @@ app.post('/fact', (req, res) => {
 	const url = 'http://numbersapi.com/' + req.body.input.trim() + '?json';
     fetch(url)
       .then(response => response.json())
-      .then(data => res.json(data)) 
+      .then(data => res.json(data.text)) 
       .catch(err => res.json('Please enter a valid form'))
 })
 
