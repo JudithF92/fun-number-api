@@ -15,7 +15,7 @@ app.post('/fact', (req, res) => {
     fetch(url)
       .then(response => response.json())
       .then(data => res.json(data)) 
-      .catch(err => res.status(400).json('unable to work with API'))
+      .catch(err => res.json('Please enter a valid form'))
 })
 
 
